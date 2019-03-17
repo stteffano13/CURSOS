@@ -17,7 +17,7 @@
 
    
    
-    <div class="wrapper fadeInDown">
+    <div class="wrapper fadeInDown" >
         <h3 style=" color: white"> Porfavor Introduce tu Email y Clave de acceso:</h3>
         <div id="formContent">
           <!-- Tabs Titles -->
@@ -31,9 +31,9 @@
       <br>
           <!-- Login Form -->
           <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
+            <input  id="login" class="fadeIn second" name="login" placeholder="login" type="email" #email="ngModel" [(ngModel)]="obj.email">
+            <input  id="login" class="fadeIn second" name="login" placeholder="password" type="password" #password="ngModel" [(ngModel)]="obj.password">
+            <input type="submit"  (click)="onSubmit()" class="fadeIn fourth" value="Log In">
           </form>
       
           <!-- Remind Passowrd -->

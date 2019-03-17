@@ -1,0 +1,74 @@
+<ion-header>
+    <!--<ion-navbar hideBackButton color="colorapp" >
+      <button ion-button menuToggle icon-only>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+      <ion-title>
+        Home
+  
+        
+      </ion-title>
+  
+  
+      
+    </ion-navbar>-->
+</ion-header>
+
+<ion-content padding center style="background-color: gray" class="getstarPrincipal">
+
+    <div class="jumbotron" *ngIf="banderBienvenida">
+        <h1 class="display-4">Biemvenido!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a (click)="EmpezarCurso()" class="btn btn-primary btn-lg" href="#" role="button">Empezar Curso</a>
+    </div>
+    <ion-card-content style="width: 60%; margin-left: 20%">
+        <ion-card>
+            <ion-grid style="width: 50%; "> 
+                <ion-row >
+                    <ion-item no-lines>
+                        <button style="width: 100%; padding: 1%; " class="btn btn-primary">Unidad Uno</button>
+                    </ion-item>
+                </ion-row>
+                <ion-row style="margin-top: -1.8%">
+                    <ion-item no-lines>
+                        <button style="width: 100%; padding: 1%;" class="btn btn-primary">Unidad Uno</button>
+                    </ion-item>
+
+                </ion-row>
+                <ion-row style="margin-top: -1.8%">
+                    <ion-item no-lines>
+                        <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
+                    </ion-item>
+                </ion-row>
+                <ion-row style="margin-top: -1.8%">
+                        <ion-item no-lines>
+                            <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
+                        </ion-item>
+                    </ion-row>
+                    <ion-row style="margin-top: -1.8%">
+                            <ion-item no-lines>
+                                <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
+                            </ion-item>
+                        </ion-row>
+                        <ion-row style="margin-top: -1.8">
+                                <ion-item no-lines>
+                                    <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
+                                </ion-item>
+                            </ion-row>
+                            <ion-row style="margin-top: -1.8%">
+                                    <ion-item no-lines>
+                                        <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
+                                    </ion-item>
+                                </ion-row>
+                                <ion-row style="margin-top: -1.8%">
+                                        <ion-item no-lines>
+                                            <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
+                                        </ion-item>
+                                    </ion-row>
+            </ion-grid>
+        </ion-card>
+    </ion-card-content>
+</ion-content>
