@@ -17,58 +17,129 @@
 <ion-content padding center style="background-color: gray" class="getstarPrincipal">
 
     <div class="jumbotron" *ngIf="banderBienvenida">
-        <h1 class="display-4">Biemvenido!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-            featured content or information.</p>
+        <h1 class="display-4">Bienvenido!</h1>
+        <p class="lead">Bienvenido al curso de Modelacion Avanzada de redes con EPANET.</p>
         <hr class="my-4">
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <a (click)="EmpezarCurso()" class="btn btn-primary btn-lg" href="#" role="button">Empezar Curso</a>
     </div>
-    <ion-card-content style="width: 60%; margin-left: 20%">
+    <ion-card-content style="width: 85%; margin-left: 7%; ">
         <ion-card>
-            <ion-grid style="width: 50%; "> 
-                <ion-row >
-                    <ion-item no-lines>
-                        <button style="width: 100%; padding: 1%; " class="btn btn-primary">Unidad Uno</button>
-                    </ion-item>
+            <div id="barraDescriptiva">{{identity.correo}}</div>
+            <ion-grid style="width: 88%; margin-top: 2%">
+                <ion-row  style="width: 105%; margin-left: -2.5%">
+
+                    <p id=DescripcionCurso>Modelacion Avanzada con redes</p>
                 </ion-row>
-                <ion-row style="margin-top: -1.8%">
-                    <ion-item no-lines>
-                        <button style="width: 100%; padding: 1%;" class="btn btn-primary">Unidad Uno</button>
-                    </ion-item>
+           
+                <ion-row >
+                    
+                        <button  (click)="AbrirUnidadUno()"  id="Unidades" class="btn btn-primary">Unidad 1. Introducción al modelo hidráulico de unidad</button>
+               
+                        <div *ngIf="banderaUnidadUno" id=SubUnidades>
+                            <button  id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
+                            <button  id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
+                            <button  id="btnSubUnidades" class="btn btn-primary">3. Modelizacion matemática de redes</button>
+                            <button  id="btnSubUnidades" class="btn btn-primary">4. Evoluación de los modelos matemáticos</button>
+                            <button  id="btnSubUnidades" class="btn btn-primary">5. Calsificación de los mdoelos matemáticos</button>
+                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.1 Según la aplicacion del modelo</button>
+                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.2 Según el grado de detalle</button>
+                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.2 Según la variable tiempo</button>
+                        </div>
 
                 </ion-row>
-                <ion-row style="margin-top: -1.8%">
-                    <ion-item no-lines>
-                        <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
-                    </ion-item>
+                <ion-row style="margin-top: 1.5%;">
+                   
+                        <button (click)="AbrirUnidadDos()"  id="Unidades"  class="btn btn-primary">Unidad Dos</button>
+
+                        <div *ngIf="banderaUnidadDos" id=SubUnidades>
+                            <button  id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
+                            <button  id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
+                            <button  id="btnSubUnidades" class="btn btn-primary">3. Modelizacion matemática de redes</button>
+                            <button  id="btnSubUnidades" class="btn btn-primary">4. Evoluación de los modelos matemáticos</button>
+                            <button  id="btnSubUnidades" class="btn btn-primary">5. Calsificación de los mdoelos matemáticos</button>
+                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.1 Según la aplicacion del modelo</button>
+                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.2 Según el grado de detalle</button>
+                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.2 Según la variable tiempo</button>
+                        </div>
+
                 </ion-row>
-                <ion-row style="margin-top: -1.8%">
-                        <ion-item no-lines>
-                            <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
-                        </ion-item>
-                    </ion-row>
-                    <ion-row style="margin-top: -1.8%">
-                            <ion-item no-lines>
-                                <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
-                            </ion-item>
-                        </ion-row>
-                        <ion-row style="margin-top: -1.8">
-                                <ion-item no-lines>
-                                    <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
-                                </ion-item>
-                            </ion-row>
-                            <ion-row style="margin-top: -1.8%">
-                                    <ion-item no-lines>
-                                        <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
-                                    </ion-item>
-                                </ion-row>
-                                <ion-row style="margin-top: -1.8%">
-                                        <ion-item no-lines>
-                                            <button style="width: 100%;  padding: 1%;" class="btn btn-primary">Unidad Uno</button>
-                                        </ion-item>
-                                    </ion-row>
+                <ion-row  style="margin-top: 1%;">
+                
+                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
+                   
+                </ion-row>
+                <ion-row  style="margin-top: 1%;">
+                    
+                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
+                    
+                </ion-row>
+                <ion-row style="margin-top: 1%;"  >
+                   
+                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
+                    
+                </ion-row>
+                <ion-row style="margin-top: 1%;">
+                   
+                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
+                
+                </ion-row>
+                <ion-row style="margin-top: 1%;"  >
+                    
+                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
+                    
+                </ion-row>
+
             </ion-grid>
         </ion-card>
     </ion-card-content>
+
+
+
+
+
+    <!-- carrusel tefo-->
+
+    <!--Carousel Wrapper-->
+<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
+      <li data-target="#video-carousel-example" data-slide-to="1"></li>
+      <li data-target="#video-carousel-example" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <video class="video-fluid" autoplay loop muted>
+          <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="carousel-item">
+        <video class="video-fluid" autoplay loop muted>
+          <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="carousel-item">
+        <video class="video-fluid" autoplay loop muted>
+          <source src="https://mdbootstrap.com/img/video/Agua-natural.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+  </div>
+  <!--Carousel Wrapper-->
+
+    
 </ion-content>
