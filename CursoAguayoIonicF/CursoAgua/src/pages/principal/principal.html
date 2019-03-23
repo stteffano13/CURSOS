@@ -1,5 +1,5 @@
 <ion-header>
-    <!--<ion-navbar hideBackButton color="colorapp" >
+  <!--<ion-navbar hideBackButton color="colorapp" >
       <button ion-button menuToggle icon-only>
         <ion-icon name='menu'></ion-icon>
       </button>
@@ -16,92 +16,254 @@
 
 <ion-content padding center style="background-color: gray" class="getstarPrincipal">
 
-    <div class="jumbotron" *ngIf="banderBienvenida">
-        <h1 class="display-4">Bienvenido!</h1>
-        <p class="lead">Bienvenido al curso de Modelacion Avanzada de redes con EPANET.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a (click)="EmpezarCurso()" class="btn btn-primary btn-lg" href="#" role="button">Empezar Curso</a>
-    </div>
-    <ion-card-content style="width: 85%; margin-left: 7%; ">
-        <ion-card>
-            <div id="barraDescriptiva">{{identity.correo}}</div>
-            <ion-grid style="width: 88%; margin-top: 2%">
-                <ion-row  style="width: 105%; margin-left: -2.5%">
+  <div class="jumbotron" *ngIf="banderBienvenida">
+    <h1 class="display-4">Bienvenido!</h1>
+    <p class="lead">Bienvenido al curso de Modelacion Avanzada de redes con EPANET.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a (click)="EmpezarCurso()" class="btn btn-primary btn-lg" href="#" role="button">Empezar Curso</a>
+  </div>
+  <ion-card-content style="width: 85%; margin-left: 7%; ">
+    <ion-card>
+      <div id="barraDescriptiva">{{identity.correo}}</div>
+      <ion-grid style="width: 88%; margin-top: 2%">
+        <ion-row style="width: 105%; margin-left: -2.5%">
 
-                    <p id=DescripcionCurso>Modelacion Avanzada con redes</p>
-                </ion-row>
-           
-                <ion-row >
-                    
-                        <button  (click)="AbrirUnidadUno()"  id="Unidades" class="btn btn-primary">Unidad 1. Introducción al modelo hidráulico de unidad</button>
-               
-                        <div *ngIf="banderaUnidadUno" id=SubUnidades>
-                            <button  id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
-                            <button  id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
-                            <button  id="btnSubUnidades" class="btn btn-primary">3. Modelizacion matemática de redes</button>
-                            <button  id="btnSubUnidades" class="btn btn-primary">4. Evoluación de los modelos matemáticos</button>
-                            <button  id="btnSubUnidades" class="btn btn-primary">5. Calsificación de los mdoelos matemáticos</button>
-                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.1 Según la aplicacion del modelo</button>
-                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.2 Según el grado de detalle</button>
-                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.2 Según la variable tiempo</button>
-                        </div>
+          <p id=DescripcionCurso>Modelacion Avanzada con redes</p>
+        </ion-row>
 
-                </ion-row>
-                <ion-row style="margin-top: 1.5%;">
-                   
-                        <button (click)="AbrirUnidadDos()"  id="Unidades"  class="btn btn-primary">Unidad Dos</button>
+        <ion-row>
 
-                        <div *ngIf="banderaUnidadDos" id=SubUnidades>
-                            <button  id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
-                            <button  id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
-                            <button  id="btnSubUnidades" class="btn btn-primary">3. Modelizacion matemática de redes</button>
-                            <button  id="btnSubUnidades" class="btn btn-primary">4. Evoluación de los modelos matemáticos</button>
-                            <button  id="btnSubUnidades" class="btn btn-primary">5. Calsificación de los mdoelos matemáticos</button>
-                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.1 Según la aplicacion del modelo</button>
-                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.2 Según el grado de detalle</button>
-                            <button  id="btnSubUnidades"  style="padding-left: 3%" class="btn btn-primary">     5.2 Según la variable tiempo</button>
-                        </div>
+          <button (click)="AbrirUnidadUno()" id="Unidades" class="btn btn-primary">Unidad 1. Introducción al modelo hidráulico
+            de unidad</button>
 
-                </ion-row>
-                <ion-row  style="margin-top: 1%;">
-                
-                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
-                   
-                </ion-row>
-                <ion-row  style="margin-top: 1%;">
-                    
-                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
-                    
-                </ion-row>
-                <ion-row style="margin-top: 1%;"  >
-                   
-                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
-                    
-                </ion-row>
-                <ion-row style="margin-top: 1%;">
-                   
-                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
-                
-                </ion-row>
-                <ion-row style="margin-top: 1%;"  >
-                    
-                        <button  id="Unidades" class="btn btn-primary">Unidad Uno</button>
-                    
-                </ion-row>
+          <div *ngIf="banderaUnidadUno" id=SubUnidades>
+            <button id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
+            <button id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
+            <button id="btnSubUnidades" class="btn btn-primary">3. Modelizacion matemática de redes</button>
+            <button id="btnSubUnidades" class="btn btn-primary">4. Evoluación de los modelos matemáticos</button>
+            <button id="btnSubUnidades" class="btn btn-primary">5. Calsificación de los mdoelos matemáticos</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.1 Según la aplicacion del modelo</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.2 Según el grado de detalle</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.2 Según la variable tiempo</button>
+          </div>
 
-            </ion-grid>
-        </ion-card>
-    </ion-card-content>
+        </ion-row>
+        <ion-row style="margin-top: 1.5%;">
+
+          <button (click)="AbrirUnidadDos()" id="Unidades" class="btn btn-primary">Unidad 2. Creació del modelo de una red</button>
+
+          <div *ngIf="banderaUnidadDos" id=SubUnidades>
+            <button id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
+            <button id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
+            <button id="btnSubUnidades" class="btn btn-primary">3. Trazado de la Red</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.1. Trazado a partir de un plano
+              de fondo</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.1.1. La Imagen</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.1.2. Escalado de la Imagen</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.1.3. Carga de la Imagen</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.1.4. Dibujo de la Red</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.2. Trazado a partir de un archivo
+              CAD
+            </button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.2.1. Dibujo de la Red</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.2.2. Exportacion de la red</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              EpaCAD</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.2.3. Mapa de fondo</button>
+            <button id="btnSubUnidades" class="btn btn-primary">4. Edición de tuberias y nudos</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 4.1. Edicion de tuberias</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 4.1.1. Diametro</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 4.1.2. Rugosidad</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 4.1. Edicion de nudos</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 4.2.1. Demanda</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Demanda base</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Curva de modulación de la demanda</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 4.2.2. Cotas</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white ; padding-top: 0.1%;" class="btn btn-primary">
+              Determinacion de las cotas</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Determinacion de las cotas a los nudos</button>
+            <button id="btnSubUnidades" class="btn btn-primary">5. Introducción y edición de otros elementos</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.1. Puntos de capacitación</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.1.1. Caracteristicas de los depósitos</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.1.2. Caracteristicas de los embalses</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.2. Grupos de bombeo</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.3. Valvulas</button>
+            <button id="btnSubUnidades" class="btn btn-primary">6. MODELACIÓN Checkpoint Unidad 2.</button>
+
+          </div>
+
+        </ion-row>
+
+
+        <ion-row style="margin-top: 1.5%;">
+          <button (click)="AbrirUnidadTres()" id="Unidades" class="btn btn-primary">Unidad 3. Edición avanzada de elementos</button>
+
+          <div *ngIf="banderaUnidadTres" id=SubUnidades>
+            <button id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
+            <button id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
+            <button id="btnSubUnidades" class="btn btn-primary">3. Edición avanzada de elementos</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.1. Depósitops</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.1.1. Llenado superior del depósito</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.1.2. Depósito de distribución</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Depósito de distribución en cabecera</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Depósito de compensación</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Depósito de cola</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Torres de presión</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Recipientes a presión (calderines)</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Ejemplo de depósito de compensación</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.2. Válvulas</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.2.1. Simulación de una válvula
+              de boya</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Válvula proporcional</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Válvula Todo/Nada</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.3. Bombas</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.3.1. Estaciones de bombeo</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Bamba de velocidad fija (BVF)</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Asociación de bombas: en serie y en paralelo</button>
+            <button id="btnSubUnidades" style="padding-left: 10%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              En serie</button>
+            <button id="btnSubUnidades" style="padding-left: 10%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              En paralelo</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Regulación con bombas de velocidad fija</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Bomba de velocidad variable (BVV)</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Combinación de Bombas de velocidad variable y fija (BVV)</button>
+
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 3.3.2. Ejemplo de regulación de
+              estaciones de bombeo</button>
+            <button id="btnSubUnidades" class="btn btn-primary">4. MODELACIÓN Checkpoint Unidad 3.</button>
+          </div>
+        </ion-row>
+        <ion-row style="margin-top: 1.5%;">
+
+          <button (click)="AbrirUnidadCuatro()" id="Unidades" class="btn btn-primary">Unidad 4. Carga hidráulica del modelo</button>
+
+          <div *ngIf="banderaUnidadCuatro" id=SubUnidades>
+
+            <button id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
+            <button id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
+            <button id="btnSubUnidades" class="btn btn-primary">3. Carga hidraúllica del modelo</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.1. Demanda base</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.2. Curva de modulación de la
+              demanda
+            </button>
+            <button id="btnSubUnidades" class="btn btn-primary">4. Carga hidraúllica del modelo</button>
+            <button id="btnSubUnidades" class="btn btn-primary">5. Estimación de la demanda</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.1. Demanda residencial</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.1.1. Caudal de diseño</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Coeficinete punta</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Caudal medio</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.1.2. Ejemplo Caudal de diseño
+              residencial
+            </button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.2. Demanda servicios</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.3. Demanda industrial</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.3.1. Ejemplo Caudal diseño industrial</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.4. Riego, limpieza y mantenimiento</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.4.1. Ejemplo Caudal de diseño
+              riego y limpieza</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.5. Incendios</button>
+            <button id="btnSubUnidades" class="btn btn-primary">6. Caracterización de fugas </button>
+            <button id="btnSubUnidades" class="btn btn-primary">7. Concluciones </button>
+            <button id="btnSubUnidades" class="btn btn-primary">8. MODELACIÓN Checkpoint Unidad 4 </button>
+
+
+
+          </div>
+
+        </ion-row>
+        <ion-row style="margin-top: 1.5%;">
+
+
+          <button (click)="AbrirUnidadCinco()" id="Unidades" class="btn btn-primary">Unidad 5. Calibración de un modelo</button>
+
+          <div *ngIf="banderaUnidadCinco" id=SubUnidades>
+
+            <button id="btnSubUnidades" class="btn btn-primary">1. Introduccion a la unidad</button>
+            <button id="btnSubUnidades" class="btn btn-primary">2. Calibración del modelo</button>
+            <button id="btnSubUnidades" class="btn btn-primary">3. Parametros ajustables del modelo</button>
+            <button id="btnSubUnidades" class="btn btn-primary">4. Concideraciones a la calibracion de un modelo</button>
+            <button id="btnSubUnidades" class="btn btn-primary">5. Etapas de la calibracion de un modelo</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.1. Realización de mediciones
+              en la red</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.1.1. El caudal de la red</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Ejemplo</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.1.2.Preción en los nudos</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+              Ejemplo</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.2. Evaluación de los resultados
+              del modelo</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.2.1. Ejemplo</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.3. Precalibrado del modelo</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.4. Análisis de sensibilidad</button>
+            <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 5.5. Ajuste fino del modelo</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.5.1. Ejemplo</button>
+            <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 5.5.2. Ajuste de presiones</button>
+            <button id="btnSubUnidades" style="padding-left: 8%; background-color: white; border-color: white; padding-top: 0.1%;" class="btn btn-primary">
+             Ejemplo</button>
+             <button id="btnSubUnidades" class="btn btn-primary">6. Informe de calibración en EPANET</button>
+             <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 6.1. Datos de calibración</button>
+             <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 6.2. Ficheros de calibrición</button>
+             <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 6.3. Ejemplo de Informe</button>
+             <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 6.4. Informe de calibración</button>
+             <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 6.4.1. Estadística</button>
+             <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 6.4.2. Gráfico de corelación</button>
+             <button id="btnSubUnidades" style="padding-left: 5%" class="btn btn-primary"> 6.4.3. Comparación de valores medios</button>
+             <button id="btnSubUnidades" class="btn btn-primary">7. MODELACIÓN Checkpoint Unidad 5.</button>
+             
+          </div>
+
+        </ion-row>
+        <ion-row style="margin-top: 1.5%;">
+
+            <button (click)="AbrirUnidadSeis()" id="Unidades" class="btn btn-primary">Unidad 6. Problema práctica de modelo</button>
+
+            <div *ngIf="banderaUnidadSeis" id=SubUnidades>
+                <button id="btnSubUnidades" class="btn btn-primary">1. Presentación</button>
+                <button id="btnSubUnidades" class="btn btn-primary">2. Presentación del caso práctico</button>
+                <button id="btnSubUnidades" class="btn btn-primary">3. Datos del modelo</button>
+                <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.1. Esquema del trazado de la red</button>
+                <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.2. Plano digitalizado del municipio</button>
+                <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.3. Datos de las tuberías</button>
+                <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.4. MODELACIÓN Checkpoint Unidad 6_1.</button>
+                <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.5. Cotas de los nudos</button>
+                <button id="btnSubUnidades" style="padding-left: 3%" class="btn btn-primary"> 3.5. Cotas de los nudos</button>
+
+              </div>
+
+       </ion-row>
+
+      </ion-grid>
+    </ion-card>
+  </ion-card-content>
 
 
 
 
 
-    <!-- carrusel tefo-->
+  <!-- carrusel tefo-->
 
-    <!--Carousel Wrapper-->
-<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Carousel Wrapper-->
+  <div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
       <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
@@ -141,5 +303,5 @@
   </div>
   <!--Carousel Wrapper-->
 
-    
+
 </ion-content>

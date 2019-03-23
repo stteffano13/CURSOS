@@ -22,6 +22,9 @@ export class PrincipalPage implements OnInit {
 
   banderaUnidadUno=false;
   banderaUnidadDos=false;
+  banderaUnidadTres=false;
+  banderaUnidadCuatro=false;
+  banderaUnidadCinco=false;
    identity=0;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController,private _userService: UserService,) {
   
@@ -49,5 +52,18 @@ export class PrincipalPage implements OnInit {
   {
     this.banderaUnidadDos=!this.banderaUnidadDos;
   }
+  AbrirUnidadTres()
+  {
+    this.banderaUnidadTres=!this.banderaUnidadTres;
+  }
 
+  AbrirUnidadCuatro()
+  {
+    this.banderaUnidadCuatro=!this.banderaUnidadCuatro;
+  }
+
+  AbrirUnidadCinco()
+  {
+    this.banderaUnidadCinco=!this.banderaUnidadCinco;
+  }
 }
