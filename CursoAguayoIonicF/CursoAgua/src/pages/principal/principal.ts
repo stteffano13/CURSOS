@@ -34,6 +34,10 @@ export class PrincipalPage implements OnInit {
   ngOnInit()
   {
     this.identity =JSON.parse(localStorage.getItem("identity")) ;
+    if(JSON.parse(localStorage.getItem("bienvenida"))=='1')
+    {
+      this.banderBienvenida=false;
+    }
 
   }
 
@@ -41,6 +45,7 @@ export class PrincipalPage implements OnInit {
   EmpezarCurso()
   {
     this.banderBienvenida = !this.banderBienvenida;
+    localStorage.setItem("bienvenida",'1');
   }
 
 

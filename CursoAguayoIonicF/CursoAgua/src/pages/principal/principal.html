@@ -23,16 +23,17 @@
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     <a (click)="EmpezarCurso()" class="btn btn-primary btn-lg" href="#" role="button">Empezar Curso</a>
   </div>
-  <ion-card-content style="width: 85%; margin-left: 7%; "  padding style="overflow: auto; height: 80%;">
-    <ion-card>
+  <ion-card-content padding style="margin-top: 4%;width: 80%;margin-left: 10%; " >
+    <ion-card >
       <div id="barraDescriptiva">{{identity.correo}}</div>
-      <ion-grid style="width: 88%; margin-top: 2%">
+      <ion-grid style="width: 90%; padding-bottom: 10%" >
         <ion-row style="width: 105%; margin-left: -2.5%">
 
           <p id=DescripcionCurso>Modelacion Avanzada con redes</p>
         </ion-row>
-
+        <ion-content padding Style="overflow: auto; height: 100%;">
         <ion-row>
+         
 
           <button (click)="AbrirUnidadUno()" id="Unidades" class="btn btn-primary">Unidad 1. Introducción al modelo hidráulico
             de unidad</button>
@@ -258,9 +259,9 @@
 
               </div>
 
-       
+           
       </ion-row>
-
+    </ion-content>
       </ion-grid>
     </ion-card>
   </ion-card-content>
