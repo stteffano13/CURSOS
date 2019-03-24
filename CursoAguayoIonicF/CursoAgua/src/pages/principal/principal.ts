@@ -9,6 +9,7 @@ import { FileService } from "../../app/services/file.services";
 import { ImagenesPage } from '../Imagenes/imagenes';
 
 import { Observable } from "rxjs";
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: "page-principal",
@@ -29,7 +30,7 @@ export class PrincipalPage implements OnInit {
   banderaUnidadCinco = false;
   banderaUnidadSeis = false;
   identity = 0;
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private _userService: UserService, private _fileServices:FileService) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, private _userService: UserService, private _fileServices: FileService) {
 
   }
 
@@ -77,11 +78,10 @@ export class PrincipalPage implements OnInit {
     this.navCtrl.push(ImagenesPage);
   }
 
-  descargar()
-  {
-    var filename ="descargar/pdf";
-    this._fileServices.downloadFile(filename).subscribe(data=> console.log(data), error=> console.error(error)
-    );
-    
+  descargar() {
+    var filename = "descargar.pdf";
+    this._fileServices.downloadFile(filename).subscribe(data => 
+   saveAs(data, filename), error => console.error(error));
+
   }
 }

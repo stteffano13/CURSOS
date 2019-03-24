@@ -7,7 +7,7 @@ var md_auth = require('../middleware/authenticated');
 
 var api = express.Router();
 
-api.get('/download', md_auth.ensureAuth, DownloadController.descargar);
+api.post('/download',DownloadController.descargar);
 
 
 module.exports = api;
