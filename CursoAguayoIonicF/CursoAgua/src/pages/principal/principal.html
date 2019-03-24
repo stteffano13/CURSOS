@@ -25,13 +25,23 @@
   </div>
   <ion-card-content padding style="margin-top: 4%;width: 80%;margin-left: 10%; " >
     <ion-card >
-      <div id="barraDescriptiva">{{identity.correo}}</div>
+      <div id="barraDescriptiva">
+          <p> <ion-icon md="md-person"  style="font-size:200%; width: 3%; margin-left: 2%"></ion-icon>
+        
+        {{identity.correo}}
+        
+      </p>
+     <div style=" border-left: 1px solid black; height: 8%; position: absolute; left: 20%; margin-left: -3px; top: 2.8%;"></div>
+
+        
+      
+      </div>
       <ion-grid style="width: 90%; padding-bottom: 10%" >
-        <ion-row style="width: 105%; margin-left: -2.5%">
+        <ion-row style="width: 105%; margin-left: -0.5%">
 
           <p id=DescripcionCurso>Modelacion Avanzada con redes</p>
         </ion-row>
-        <ion-content padding Style="overflow: auto; height: 100%;">
+        <ion-content padding Style="overflow: auto; height: 100%;padding-bottom: 28%">
         <ion-row>
          
 
