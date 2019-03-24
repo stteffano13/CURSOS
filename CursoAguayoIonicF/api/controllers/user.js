@@ -73,14 +73,14 @@ function loginUser(req, res) {
 
 
 function saveUser(req, res) {
-    
-   // var fecha = now.format('MM-DD-YYYY');
+
+ //var fecha = now.format('MM-DD-YYYY');
     var user = new User();
     var params = req.body; // cuerpo de la peticion post de la direccion http por post
     // console.log(params);
 
     User.findOne({
-        '$and': [ { correo: params.correo }]
+        '$and': [{ correo: params.correo }]
     }, (err, users) => {
         if (err) {
             res.status(500).send({
@@ -93,13 +93,13 @@ function saveUser(req, res) {
                 });
             } else {
                 console.log(params.contrasena);
-                //user.nombre = params.nombre;
-               // user.apellido = params.apellido;
+                user.nombre = params.nombre;
+                user.apellido = params.apellido;
                 user.correo = params.correo;
                 user.contrasena = params.contrasena;
-               // user.tel_celular = params.tel_celular;
-              //  user.paypal=params.paypal;
-               // user.fechaRegistro=fecha;
+                user.tel_celular = params.tel_celular;
+                user.paypal = params.paypal;
+               // user.fechaRegistro = fecha;
 
                 if (params.contrasena) {
 
@@ -148,7 +148,7 @@ module.exports = {          // para exportar todas las funciones de este modulo
     pruebas,
     saveUser,
     loginUser,
-    
+
 
 
 };

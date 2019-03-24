@@ -15,7 +15,6 @@ var UserSchema = Schema({
     contrasena: String,
     tel_celular: String,
     estado: String,
-    paypal:String,
     fechaRegistro:String
 });
 

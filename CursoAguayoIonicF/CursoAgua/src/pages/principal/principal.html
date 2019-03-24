@@ -23,21 +23,21 @@
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     <a (click)="EmpezarCurso()" class="btn btn-primary btn-lg" href="#" role="button">Empezar Curso</a>
   </div>
-  <ion-card-content padding style="margin-top: 4%;width: 80%;margin-left: 10%; " >
+  <ion-card-content padding style="margin-top: 2%;width: 65%;margin-left: 17%; " >
     <ion-card >
       <div id="barraDescriptiva">
-          <p> <ion-icon md="md-person"  style="font-size:200%; width: 3%; margin-left: 2%"></ion-icon>
+          <p> <ion-icon md="md-person"  style="font-size:200%; width: 3%; margin-left: 2%"></ion-icon> 
         
-        {{identity.correo}}
+       {{identity.nombre}}  {{identity.apellido}}</p>
         
-      </p>
-     <div style=" border-left: 1px solid black; height: 8%; position: absolute; left: 20%; margin-left: -3px; top: 2.5%;"></div>
+     
+     <div style=" border-left: 1px solid black; height: 6%; position: absolute; left: 27%; margin-left: -3px; top: 2.5%;"></div>
 
-     <div style=" border-left: 1px solid black; height: 8%; position: absolute; left: 40%; margin-left: -3px; top: 2.5%;"></div>
+     <div style=" border-left: 1px solid black; height: 6%; position: absolute; left: 50%; margin-left: -3px; top: 2.5%;"></div>
 
-     <div style=" border-left: 1px solid black; height: 8%; position: absolute; left: 85%; margin-left: -3px; top: 2.5%;"></div>
+     <div style=" border-left: 1px solid black; height: 6%; position: absolute; left: 82%; margin-left: -3px; top: 2.5%;"></div>
 
-     <ion-icon md="md-menu"  style="font-size:250%; width: 3%; margin-left: 2%;position: absolute; left: 85%;top: 4%;"></ion-icon>
+     <ion-icon md="md-menu"  style="font-size:250%; width: 6%; margin-left: 2%;position: absolute; left: 85%;top: 3%;"></ion-icon>
       
       </div>
       <ion-grid style="width: 90%;" >
@@ -45,7 +45,7 @@
 
           <p id=DescripcionCurso>Modelacion Avanzada con redes</p>
         </ion-row>
-        <ion-content padding Style="overflow: auto; height: 100%;padding-bottom: 40%">
+        <ion-content padding Style="overflow: auto; height: 100%;padding-bottom: 50%">
         <ion-row>
          
 
@@ -53,7 +53,7 @@
             de unidad</button>
 
           <div *ngIf="banderaUnidadUno" id=SubUnidades>
-            <button id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
+            <button  (click)="AbrirImagenes()" id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
             <button id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
             <button id="btnSubUnidades" class="btn btn-primary">3. Modelizacion matemática de redes</button>
             <button id="btnSubUnidades" class="btn btn-primary">4. Evoluación de los modelos matemáticos</button>
@@ -281,51 +281,9 @@
   </ion-card-content>
 
 
+<button (click)="descargar()">descargar</button>
 
 
-
-  <!-- carrusel tefo-->
-
-  <!--Carousel Wrapper-->
-  <div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-      <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
-      <li data-target="#video-carousel-example" data-slide-to="1"></li>
-      <li data-target="#video-carousel-example" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active">
-        <video class="video-fluid" autoplay loop muted>
-          <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="carousel-item">
-        <video class="video-fluid" autoplay loop muted>
-          <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="carousel-item">
-        <video class="video-fluid" autoplay loop muted>
-          <source src="https://mdbootstrap.com/img/video/Agua-natural.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-    <!--/.Slides-->
-    <!--Controls-->
-    <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
-  </div>
-  <!--Carousel Wrapper-->
-
+  
 
 </ion-content>

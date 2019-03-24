@@ -8,12 +8,17 @@ import { UserService } from './services/user.services';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PrincipalPage } from '../pages/principal/principal';
+import { ImagenesPage } from '../pages/Imagenes/imagenes';
+import { FileService } from './services/file.services';
+
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     PrincipalPage,
+    ImagenesPage,
   ],
   imports: [
     BrowserModule,
@@ -25,11 +30,13 @@ import { PrincipalPage } from '../pages/principal/principal';
     MyApp,
     HomePage,
     PrincipalPage,
+    ImagenesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     UserService,
+    FileService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
