@@ -82,8 +82,10 @@ public cont =0;
   logout() {
     localStorage.removeItem("identity");
     localStorage.removeItem("Token");
+    localStorage.removeItem("bienvenida");
     localStorage.clear();
     this.identity = null;
     this.token = null;
+    location.reload();
   }
 }

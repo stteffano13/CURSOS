@@ -29,6 +29,7 @@ export class PrincipalPage implements OnInit {
   banderaUnidadCuatro = false;
   banderaUnidadCinco = false;
   banderaUnidadSeis = false;
+  banderCard=false;
   identity = 0;
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, private _userService: UserService, private _fileServices: FileService) {
 
@@ -38,6 +39,10 @@ export class PrincipalPage implements OnInit {
     this.identity = JSON.parse(localStorage.getItem("identity"));
     if (JSON.parse(localStorage.getItem("bienvenida")) == 1) {
       this.banderBienvenida = false;
+      this.banderCard=true;
+    }else{
+      this.banderCard=false;
+      this.banderBienvenida=true;
     }
 
   }
@@ -46,6 +51,7 @@ export class PrincipalPage implements OnInit {
   EmpezarCurso() {
     this.banderBienvenida = !this.banderBienvenida;
     localStorage.setItem("bienvenida", '1');
+    this.banderCard=true;
   }
 
 
@@ -79,9 +85,15 @@ export class PrincipalPage implements OnInit {
   }
 
   descargar() {
+    this.banderaUnidadUno=!this.banderaUnidadUno;
     var filename = "descargar.pdf";
     this._fileServices.downloadFile(filename).subscribe(data => 
    saveAs(data, filename), error => console.error(error));
 
+  }
+
+  Logout()
+  {
+    this._userService.logout();
   }
 }

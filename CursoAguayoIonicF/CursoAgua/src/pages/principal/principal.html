@@ -23,7 +23,7 @@
     <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     <a (click)="EmpezarCurso()" class="btn btn-primary btn-lg" href="#" role="button">Empezar Curso</a>
   </div>
-  <ion-card-content padding style="margin-top: 2%;width: 65%;margin-left: 17%; " >
+  <ion-card-content padding style="margin-top: 2%;width: 65%;margin-left: 17%; " *ngIf="banderCard" >
     <ion-card >
       <div id="barraDescriptiva">
           <p> <ion-icon md="md-person"  style="font-size:200%; width: 3%; margin-left: 2%"></ion-icon> 
@@ -48,10 +48,11 @@
         <ion-content padding Style="overflow: auto; height: 100%;padding-bottom: 50%">
         <ion-row>
          
-
-          <button (click)="AbrirUnidadUno()" id="Unidades" class="btn btn-primary">Unidad 1. Introducción al modelo hidráulico
-            de unidad</button>
-
+         
+       <button (click)="AbrirUnidadUno()" style="padding-top: 0%" id="Unidades" class="btn btn-primary">Unidad 1. Introducción al modelo hidráulico
+            de unidad <ion-icon md="md-folder-open"  style="width: 5% ;font-size:250%;margin-left: 60%;padding-bottom: -2%" (click)="descargar()" ></ion-icon></button>
+            
+         
           <div *ngIf="banderaUnidadUno" id=SubUnidades>
             <button  (click)="AbrirImagenes()" id="btnSubUnidades" class="btn btn-primary">1. Presentacion</button>
             <button id="btnSubUnidades" class="btn btn-primary">2. Introduccion a la unidad</button>
@@ -275,8 +276,10 @@
 
            
       </ion-row>
+      
     </ion-content>
       </ion-grid>
+      <button  (click)="Logout()">Cerrar Sesión</button>
     </ion-card>
   </ion-card-content>
 
