@@ -86,7 +86,7 @@ export class PrincipalPage implements OnInit {
 
   descargar() {
     this.banderaUnidadUno=!this.banderaUnidadUno;
-    var filename = "descargar.pdf";
+    var filename = "1.GUIA.ALUMNO.EPANET.pdf";
     this._fileServices.downloadFile(filename).subscribe(data => 
    saveAs(data, filename), error => console.error(error));
 

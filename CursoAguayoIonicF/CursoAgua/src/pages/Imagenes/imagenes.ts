@@ -18,6 +18,7 @@ import { Observable } from "rxjs";
   
     @ViewChild('NAV') nav: Nav;
   
+  var unidad={'Slide1',"Slide2"}
  
     identity = 0;
     constructor(public navCtrl: NavController, public alertCtrl: AlertController, private _userService: UserService, ) {
