@@ -79,8 +79,10 @@ export class PrincipalPage implements OnInit {
 
   }
 
-  AbrirImagenes() {
+  AbrirImagenes(numerounidad) {
 
+    localStorage.setItem("numerounidad", numerounidad);
+    
     this.navCtrl.push(ImagenesPage);
   }
 

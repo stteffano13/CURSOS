@@ -35,10 +35,10 @@
                         <!--Slides-->
                         <div>
                             <div class="carousel-item active">
-                                <img src="assets/imgs/agua.jpg">
+                                <img [src]="ImgsCarasUnidad1Destino[0].name">
                             </div>
 
-                            <div class="carousel-item" *ngFor=" let unidad of  ImgsUnidad1">
+                            <div class="carousel-item" *ngFor=" let unidad of  ImgsUnidad1Destino">
                                 <img [src]="unidad.name">
                             </div>
 
