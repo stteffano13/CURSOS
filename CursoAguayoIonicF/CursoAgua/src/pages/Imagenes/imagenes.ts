@@ -110,7 +110,19 @@ export class ImagenesPage implements OnInit {
       this.fores(1, 0);
     } else {
       if (JSON.parse(localStorage.getItem("numerounidad")) == 2) {
-        this.fores(3,2);
+        this.fores(3, 2);
+      } else {
+        if (JSON.parse(localStorage.getItem("numerounidad")) == 3) {
+          this.fores(4, 3);
+        } else {
+          if (JSON.parse(localStorage.getItem("numerounidad")) == 4) {
+            this.fores(15, 14);
+          }else
+          {
+            
+          }
+
+        }
       }
     }
 
