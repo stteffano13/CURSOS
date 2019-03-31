@@ -17,9 +17,13 @@ import { Observable } from "rxjs";
   
   
     @ViewChild('NAV') nav: Nav;
+
   
-  var unidad={'Slide1',"Slide2"}
- 
+  
+  ImgsUnidad1=[
+      { "id": 1, "name": "assets/imgs/Slide1.png" },
+      { "id": 2, "name": "assets/imgs/Slide2.png"}];
+
     identity = 0;
     constructor(public navCtrl: NavController, public alertCtrl: AlertController, private _userService: UserService, ) {
   
